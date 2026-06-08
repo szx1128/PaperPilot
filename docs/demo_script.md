@@ -1,8 +1,8 @@
 # PaperPilot 演示脚本
 
-> 版本：v1.6.6 | 最后更新：2026-06-08
+> 版本：v1.6.8 | 最后更新：2026-06-08
 
-本文档描述 PaperPilot 当前版本（v1.6.6）的完整演示流程。
+本文档描述 PaperPilot 当前版本（v1.6.8）的完整演示流程。
 
 ---
 
@@ -27,6 +27,25 @@
 答辩话术：
 
 > 本轮我做的是可运行 Demo 的部署适配，而不是继续堆功能。PaperPilot 保持 Streamlit 单入口，考核方可以本地用 `streamlit run app.py` 运行，也可以把仓库部署到 Streamlit Community Cloud。API Key 不写入代码和仓库，而是本地 `.env` 或云端 Secrets 管理；没有 Key 时系统会进入基础模式，保证 Demo 不会因为密钥缺失直接崩溃。
+
+---
+
+## 场景：在线 Demo 中输入 API Key（v1.6.8 新增）
+
+1. 打开 PaperPilot 在线 Demo。
+2. 在侧边栏展开“LLM API 设置”。
+3. 选择 DeepSeek 或 OpenAI，也可以选择“自定义 OpenAI-Compatible”。
+4. 在 password 类型输入框中输入 API Key。
+5. 确认 Base URL 和模型名称，例如 DeepSeek 默认为 `https://api.deepseek.com` 和 `deepseek-chat`。
+6. 点击“保存本次会话 API 配置”。
+7. 页面显示 LLM 状态为“已通过本次会话配置”，并展示模型名称和脱敏后的 Key。
+8. 搜索论文并进入摘要、问答、Reviewer 或创新点分析。
+9. 展示系统可以在不保存 API Key 的前提下启用智能分析功能。
+10. 点击“清除本次会话 API 配置”，确认状态回到基础模式。
+
+答辩话术：
+
+> 在线 Demo 不适合把我的个人 API Key 写进仓库或公开部署环境，所以我增加了会话级 API 配置。用户可以在侧边栏临时输入自己的 DeepSeek、OpenAI 或 OpenAI-compatible 配置，Key 只存在当前 Streamlit session_state 里，不写入文件、不提交 Git，也不会在页面明文显示。这样既保证 Demo 可体验智能分析能力，又降低密钥泄露风险。
 
 ---
 

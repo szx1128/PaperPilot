@@ -12,7 +12,7 @@ PaperPilot 是一个面向科研论文阅读流程的可运行原型系统。系
 
 > 部署完成后填写：`https://your-app-url.streamlit.app`
 
-如果当前没有配置 LLM API Key，系统会以基础模式运行，论文搜索、排序和基础展示功能仍可使用，摘要问答、Reviewer 分析和科研洞察等功能需要配置 API Key 后启用。
+如果当前没有配置 LLM API Key，系统会以基础模式运行，论文搜索、排序和基础展示功能仍可使用。用户也可以在页面侧边栏临时输入自己的 API Key，以便在当前会话中启用摘要、问答、Reviewer 分析等智能能力。
 
 ## 📌 项目简介
 
@@ -26,7 +26,7 @@ PaperPilot 是一个面向科研工作者的学术论文阅读助手。它不只
 
 ## 🚧 当前版本
 
-**v1.6.6（在线部署与可运行 Demo 补丁）**
+**v1.6.8（在线 API 输入与会话级配置补丁）**
 
 已完成：
 - [x] 论文发现（arXiv 搜索，15s 超时，示例兜底）
@@ -44,6 +44,13 @@ PaperPilot 是一个面向科研工作者的学术论文阅读助手。它不只
 - [x] **研究趋势分析**（关键词分布、时间分布、分类分布、热点/新兴/高分主题、代表论文、趋势总结）
 - [x] **论文关系图谱**（基于相似度/分类/作者/引用字段的关系网络、Graphviz 图、主题簇、中心论文）
 - [x] **在线部署适配**（Streamlit Community Cloud 配置、runtime.txt、部署文档、Secrets 说明、无 API Key 基础模式）
+- [x] **在线 API 临时配置**（用户可在页面侧边栏输入 API Key / Base URL / Model，仅当前会话生效，不写入项目文件）
+
+### Version 1.6.8：在线 API 输入与会话级配置补丁
+
+本版本面向在线 Demo 可用性增强，不新增论文分析算法。在线部署后，即使部署方没有在 Streamlit Secrets 中配置 API Key，用户也可以在页面侧边栏的“LLM API 设置”中临时输入自己的 API Key、Base URL 和模型名称，从而在当前浏览器会话中启用 LLM 摘要、问答、Reviewer 和创新点分析等能力。
+
+临时 API 配置只保存在 `st.session_state` 中，不会写入 `.env`、`data/*.json`、Streamlit secrets 文件或项目文档；页面也不会明文展示完整 API Key。页面刷新、会话过期或服务重启后，用户可能需要重新输入。
 
 ### Version 1.6.6：在线部署与可运行 Demo 补丁
 
@@ -181,6 +188,46 @@ streamlit run app.py
 启动后在浏览器中访问 `http://localhost:8501`。
 
 > 💡 即使不配置 `.env` 文件，系统也能正常运行（使用模板和关键词匹配作为 Fallback）。
+
+## LLM API 配置方式
+
+PaperPilot 支持三种 LLM API 配置方式，优先级如下：
+
+1. 页面侧边栏临时输入 API Key；
+2. Streamlit Community Cloud Secrets；
+3. 本地 `.env` 或环境变量。
+
+### 在线 Demo 临时输入
+
+在线部署后，用户可以在页面侧边栏的“LLM API 设置”中输入：
+
+- API Key
+- Base URL
+- Model
+
+该配置仅在当前会话中生效，不会写入项目文件，也不会提交到 GitHub。API Key 输入框使用 password 类型，页面只显示脱敏状态，不显示完整 Key。
+
+### Streamlit Secrets 配置
+
+在 Streamlit Cloud 的 App Settings / Secrets 中填写：
+
+```toml
+LLM_API_KEY = "your_api_key_here"
+LLM_BASE_URL = "https://api.deepseek.com"
+LLM_MODEL = "deepseek-chat"
+```
+
+### 本地 `.env` 配置
+
+复制 `.env.example` 为 `.env`，然后填写：
+
+```env
+LLM_API_KEY=your_api_key_here
+LLM_BASE_URL=https://api.deepseek.com
+LLM_MODEL=deepseek-chat
+```
+
+如果未配置 API Key，系统会以基础模式运行，论文搜索、排序和基础展示仍可使用，但摘要、问答、Reviewer 和创新点分析等 LLM 能力会提示需要配置 API Key 或自动降级。
 
 ## Deployment
 

@@ -1,6 +1,6 @@
 # PaperPilot 系统设计文档
 
-> 版本：v1.6.6 | 最后更新：2026-06-08
+> 版本：v1.6.8 | 最后更新：2026-06-08
 
 ---
 
@@ -32,6 +32,10 @@
 ### 在线 Demo 部署设计（v1.6.6）
 
 PaperPilot 保持 Streamlit 单入口：`streamlit run app.py`。在线部署优先支持 Streamlit Community Cloud，通过 `requirements.txt` 声明依赖、`runtime.txt` 指定 Python 3.11、`.streamlit/config.toml` 提供基础运行配置。真实 API Key 不进入代码和仓库，本地通过 `.env` 配置，云端通过 Streamlit Secrets 配置。缺少 API Key 时，LLM 相关模块自动进入 Fallback 或基础模式，保证 Demo 首页、搜索、排序和非 LLM 分析流程仍可运行。
+
+### 在线 API 会话配置设计（v1.6.8）
+
+在线 Demo 允许用户在侧边栏临时输入 LLM API Key、Base URL 和模型名称。配置优先级为：当前 `st.session_state` 会话输入 > Streamlit Secrets > 本地 `.env` / 环境变量 > 基础模式。会话输入只在当前浏览器会话中生效，不写入 `.env`、`data/*.json` 或 `.streamlit/secrets.toml`。页面仅显示脱敏后的 Key 状态，所有 LLM 调用仍统一经过 `modules/llm_client.py`，避免各业务模块分散读取密钥。
 
 ### 追踪模块设计
 

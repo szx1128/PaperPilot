@@ -4,6 +4,20 @@
 
 ---
 
+## Version 1.6.8：在线 API 输入与会话级配置补丁（2026-06-08）
+
+- [x] 在侧边栏新增“LLM API 设置”区域，支持 DeepSeek / OpenAI / 自定义 OpenAI-Compatible；
+- [x] API Key 输入框使用 password 类型；
+- [x] 支持用户输入 Base URL 和模型名称；
+- [x] 点击“保存本次会话 API 配置”后，仅写入 `st.session_state`，不写入 `.env`、data 或 secrets 文件；
+- [x] 点击“清除本次会话 API 配置”后，恢复部署 Secrets / 环境变量 / 基础模式；
+- [x] `llm_client` 新增统一动态配置解析，优先级为：会话输入 > Streamlit Secrets > 本地 `.env` / 环境变量 > 基础模式；
+- [x] LLM 状态显示配置来源、模型名称和脱敏 Key，不展示完整 API Key；
+- [x] 摘要、QA、Reviewer 和创新点分析在无 API Key 时显示侧边栏配置提示；
+- [x] 更新 README、deployment、limitations 和 demo_script 文档。
+
+---
+
 ## Version 1.6.6：在线部署与可运行 Demo 补丁（2026-06-08）
 
 - [x] 保持 Streamlit 主入口为 `streamlit run app.py`，不引入额外后端服务；

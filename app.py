@@ -3,7 +3,7 @@ PaperPilot: 从论文发现到知识沉淀的科研阅读助手
 ==============================================
 Streamlit 主入口文件。
 
-当前版本：v1.6.6（在线部署与可运行 Demo 补丁）
+当前版本：v1.6.8（在线 API 输入与会话级配置补丁）
 """
 
 import streamlit as st
@@ -271,8 +271,42 @@ if "tracker_state" not in st.session_state:
 if "last_refresh_result" not in st.session_state:
     st.session_state.last_refresh_result = None
 
-# ── LLM 状态 ──────────────────────────────────────────────
-llm_info = get_llm_info()
+PROVIDER_PRESETS = {
+    "DeepSeek": {
+        "base_url": "https://api.deepseek.com",
+        "model": "deepseek-chat",
+    },
+    "OpenAI": {
+        "base_url": "https://api.openai.com/v1",
+        "model": "gpt-4o-mini",
+    },
+    "自定义 OpenAI-Compatible": {
+        "base_url": "",
+        "model": "",
+    },
+}
+
+LLM_SOURCE_LABELS = {
+    "session_input": "已通过本次会话配置",
+    "streamlit_secrets": "已通过部署 Secrets 配置",
+    "env": "已通过环境变量配置",
+    "missing": "未配置，当前为基础模式",
+}
+
+
+def _clear_session_llm_config():
+    """清除当前会话中的临时 LLM 配置，不触碰 .env 或 Secrets。"""
+    for key in [
+        "LLM_API_KEY",
+        "LLM_BASE_URL",
+        "LLM_MODEL",
+        "LLM_CONFIG_SOURCE",
+        "_llm_api_key_input",
+        "_llm_base_url_input",
+        "_llm_model_input",
+    ]:
+        if key in st.session_state:
+            del st.session_state[key]
 
 # ── 侧边栏 ────────────────────────────────────────────────
 with st.sidebar:
@@ -280,12 +314,71 @@ with st.sidebar:
     st.caption("科研论文阅读助手")
     st.divider()
 
-    st.info("🔧 当前版本：v1.6.6（在线部署与可运行 Demo 补丁）")
+    st.info("🔧 当前版本：v1.6.8（在线 API 输入与会话级配置补丁）")
 
+    with st.expander("🔐 LLM API 设置", expanded=False):
+        st.caption("在线 Demo 支持临时输入 API Key。该配置仅用于当前会话，不会写入项目文件。")
+        provider = st.selectbox(
+            "Provider",
+            options=list(PROVIDER_PRESETS.keys()),
+            index=0,
+            key="_llm_provider_select",
+        )
+        preset = PROVIDER_PRESETS[provider]
+        last_provider = st.session_state.get("_llm_last_provider")
+        if last_provider != provider:
+            st.session_state["_llm_base_url_input"] = preset["base_url"]
+            st.session_state["_llm_model_input"] = preset["model"]
+            st.session_state["_llm_last_provider"] = provider
+
+        api_key_input = st.text_input(
+            "API Key",
+            type="password",
+            key="_llm_api_key_input",
+            help="仅用于当前会话，不会保存到项目文件。",
+            placeholder="请输入你的 API Key",
+        )
+        base_url_input = st.text_input(
+            "Base URL",
+            key="_llm_base_url_input",
+            placeholder="例如：https://api.deepseek.com",
+        )
+        model_input = st.text_input(
+            "Model",
+            key="_llm_model_input",
+            placeholder="例如：deepseek-chat",
+        )
+
+        save_llm_config = st.button("保存本次会话 API 配置", use_container_width=True)
+        clear_llm_config = st.button("清除本次会话 API 配置", use_container_width=True)
+
+        if save_llm_config:
+            if not api_key_input.strip():
+                st.warning("请输入 API Key 后再保存。")
+            elif not base_url_input.strip() or not model_input.strip():
+                st.warning("请确认 Base URL 和模型名称均已填写。")
+            else:
+                # 只写入 session_state，绝不写入 .env、data 或 secrets 文件。
+                st.session_state["LLM_API_KEY"] = api_key_input.strip()
+                st.session_state["LLM_BASE_URL"] = base_url_input.strip()
+                st.session_state["LLM_MODEL"] = model_input.strip()
+                st.session_state["LLM_CONFIG_SOURCE"] = "session_input"
+                st.success("已保存本次会话 API 配置。")
+
+        if clear_llm_config:
+            _clear_session_llm_config()
+            st.success("已清除本次会话 API 配置。")
+            st.rerun()
+
+    llm_info = get_llm_info()
     if llm_info["available"]:
-        st.success(f"🤖 LLM 已就绪：{llm_info['model']}")
+        source_label = LLM_SOURCE_LABELS.get(llm_info.get("source", ""), "已配置")
+        st.success(f"🤖 LLM 状态：{source_label}")
+        st.caption(f"模型：{llm_info['model']}")
+        if llm_info.get("masked_api_key"):
+            st.caption(f"API Key：{llm_info['masked_api_key']}")
     else:
-        st.warning("⚠️ 当前未检测到 LLM API Key，系统将以基础模式运行")
+        st.warning("⚠️ LLM 状态：未配置，当前为基础模式")
         st.caption("论文搜索、排序和基础展示仍可使用；摘要问答、Reviewer 等能力会降级或提示配置。")
 
     st.divider()
@@ -747,6 +840,8 @@ with tab1:
             # 重新生成总结时清空旧笔记（但不清空 QA，QA 按 paper_id 隔离）
             st.session_state.note_md = None
             st.session_state.note_saved_path = None
+            if not get_llm_info()["available"]:
+                st.info("当前未检测到 LLM API Key。本次将使用模板总结；如需 LLM 增强，请在侧边栏“LLM API 设置”中临时输入 API Key。")
     
             selected_paper = ranked_papers[selected_idx]
             st.session_state.selected_paper = selected_paper; _set_current_paper(selected_paper)
@@ -931,6 +1026,8 @@ with tab1:
                         if not pdf_ctx["available"]:
                             st.warning(f"⚠️ {pdf_ctx['reason']}。全文问答需要当前论文的 PDF。")
                         else:
+                            if not get_llm_info()["available"]:
+                                st.info("当前未检测到 LLM API Key。本次将使用关键词匹配模式；如需智能问答，请在侧边栏“LLM API 设置”中临时输入 API Key。")
                             cpid_qa2 = st.session_state.current_paper_id
                             # 总结也按 paper_id 校验，避免拿别的论文总结参与当前问答。
                             summary_for_qa2 = (st.session_state.summary
@@ -1319,6 +1416,8 @@ with tab3:
                 # 不修改 current_paper / current_paper_id
                 # 使用局部 selected_rev / selected_rev_id
                 srcl = source_type.replace("当前", "").replace(" ", "_").strip("_") or "unknown"
+                if not get_llm_info()["available"]:
+                    st.info("当前未检测到 LLM API Key。本次将使用规则化 Reviewer 分析；如需 LLM 分析，请在侧边栏“LLM API 设置”中临时输入 API Key。")
 
                 if rev_pdf_ctx["available"]:
                     usep = rev_pdf_ctx["paper_text"]
@@ -1395,6 +1494,8 @@ with tab4:
                 cpid = st.session_state.current_paper_id
                 summary_in = (st.session_state.summary if st.session_state.summary_paper_id == cpid else None)
                 qa_in = [q for q in st.session_state.qa_history if q.get("paper_id") == cpid]
+                if not get_llm_info()["available"]:
+                    st.info("当前未检测到 LLM API Key。本次将使用规则化创新点分析；如需 LLM 增强，请在侧边栏“LLM API 设置”中临时输入 API Key。")
                 if pdf_ctx_in["available"]:
                     paper_in, chunks_in, used_in = pdf_ctx_in["paper_text"], pdf_ctx_in["paper_chunks"], True
                 else:
