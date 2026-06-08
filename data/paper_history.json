@@ -1,0 +1,890 @@
+{
+  "papers": {
+    "arxiv_2606.07513": {
+      "paper_id": "arxiv_2606.07513",
+      "arxiv_id": "2606.07513v1",
+      "title": "Agentopia: Long-Term Life Simulation and Learning in Agent Societies",
+      "authors": [
+        "Xintao Wang",
+        "Sirui Zheng",
+        "Hongqiu Wu",
+        "Weiyuan Li",
+        "Jen-tse Huang",
+        "Minghao Zhu",
+        "Can Zu",
+        "Qi Deng",
+        "Jiawei Wang",
+        "Qianyu He",
+        "Heng Wang",
+        "Xiaojian Wu",
+        "Yunzhe Tao"
+      ],
+      "summary": "Humans learn from social life. Simulating this process with LLM-powered agents represents a promising research direction, raising a natural question: whether LLMs can learn from such simulated social experience to better understand and replicate human behavior. However, prior agent society simulations typically operate at the scale of days, limiting the depth of social interactions and long-term growth. In this paper, we study long-term life simulation and LLM learning in agent societies, with two goals: (1) investigating social behaviors that emerge from life-long simulation, and (2) developing anthropomorphic capabilities in LLMs, particularly intelligence in social life, through years of simulated social experience. Specifically, we present Agentopia, a comprehensive framework for long-term life simulation in multi-agent societies, where 100 agents autonomously pursue personal growth, develop social relationships, and fulfill their needs and goals over 10 simulated years. We define life reward to mirror human well-being, and leverage this reward to train LLMs via rejection sampling. Extensive experiments show that agents exhibit rich emergent social behaviors. Furthermore, life reward training effectively enhances the underlying LLM, which leads to improved agent well-being in simulation, and generalizes to downstream role-playing benchmarks with +15.6% improvement.",
+      "published": "2026-06-05",
+      "updated": "2026-06-08T12:40:04.866653+00:00",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "arxiv_url": "http://arxiv.org/abs/2606.07513v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07513v1",
+      "score": 61.8,
+      "score_breakdown": {
+        "relevance": 0.0,
+        "contribution": 95.0,
+        "method_clarity": 100,
+        "evidence": 85.0,
+        "freshness": 100.0,
+        "readability": 100.0
+      },
+      "rank_reason": "该论文【可作为候选】。它在方法清晰度、新鲜度方面表现较好。摘要中包含较明确的实验或理论支撑，适合作为重点阅读或复现参考。摘要结构清晰，问题-方法-结果均有体现，适合快速理解核心思路。与当前搜索关键词匹配一般，建议确认是否与研究方向相关。",
+      "recommendation_level": "可作为候选",
+      "is_new": false,
+      "status": "unread",
+      "first_seen_at": "2026-06-08T12:30:25.182592+00:00",
+      "last_seen_at": "2026-06-08T12:40:04.866653+00:00",
+      "source_watch_ids": [
+        "watch_f19ba6f08ca2",
+        "watch_60e91c031167"
+      ],
+      "source_watch_names": [
+        "agent",
+        "llm"
+      ]
+    },
+    "arxiv_2606.07486": {
+      "paper_id": "arxiv_2606.07486",
+      "arxiv_id": "2606.07486v1",
+      "title": "OPENPATH: A Supervisor--Specialist Agent System for Personalized, Accessible, and Multi-stop Urban Trip Planning",
+      "authors": [
+        "Ziyang Xiong",
+        "He Zong",
+        "Zhiyuan Xue",
+        "Manxi Wu"
+      ],
+      "summary": "Urban trip-planning systems are commonly optimized for travel time and cost, but they offer limited support for the heterogeneous needs that real travelers bring, such as personalized preferences, multi-stop itinerary construction, and end-to-end wheelchair accessibility. We present openpaths, a supervisor-specialist multi-agent system that handles all of these tasks within a single architecture. openpaths adopts a deliberate division of labor: LLM agents parse natural-language input, classify request intent, and orchestrate execution, while classical algorithms perform route optimization over curated mobility and accessibility data. This design ensures that the resulting trip honors heterogeneous user preferences and enforces strict accessibility requirements when requested. Beyond per-user planning, openpaths doubles as a measurement instrument for city-scale accessibility analysis: applied to NYC, the system reveals substantial ADA infrastructure gaps and quantifies their effect on job accessibility for wheelchair users. Overall, this study shows how a supervisor-specialist LLM agentic framework can support heterogeneous trip planning and transparent, equitable transportation analysis in real urban environments.",
+      "published": "2026-06-05",
+      "updated": "2026-06-08T12:40:04.485113+00:00",
+      "categories": [
+        "eess.SY"
+      ],
+      "primary_category": "eess.SY",
+      "arxiv_url": "http://arxiv.org/abs/2606.07486v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07486v1",
+      "score": 67.6,
+      "score_breakdown": {
+        "relevance": 29.5,
+        "contribution": 95.0,
+        "method_clarity": 100,
+        "evidence": 55.0,
+        "freshness": 100.0,
+        "readability": 100.0
+      },
+      "rank_reason": "该论文【可作为候选】。它在方法清晰度、新鲜度方面表现较好。摘要结构清晰，问题-方法-结果均有体现，适合快速理解核心思路。与当前搜索关键词匹配一般，建议确认是否与研究方向相关。",
+      "recommendation_level": "可作为候选",
+      "is_new": false,
+      "status": "unread",
+      "first_seen_at": "2026-06-08T12:30:25.182592+00:00",
+      "last_seen_at": "2026-06-08T12:40:04.485113+00:00",
+      "source_watch_ids": [
+        "watch_f19ba6f08ca2"
+      ],
+      "source_watch_names": [
+        "agent"
+      ]
+    },
+    "arxiv_2606.07462": {
+      "paper_id": "arxiv_2606.07462",
+      "arxiv_id": "2606.07462v1",
+      "title": "Act As a Real Researcher: A Suite of Benchmarks Evaluating Frontier LLMs and Agentic Harnesses in Research Lifecycle",
+      "authors": [
+        "Jiayu Wang",
+        "Weijiang Lv",
+        "Bowen Fu",
+        "Jing Fu",
+        "Jiayi Song",
+        "Lingyu Zhang",
+        "Lanxuan Xue",
+        "Luodi Chen",
+        "Zepeng Xin",
+        "Kaiyu Li",
+        "Xiangyong Cao"
+      ],
+      "summary": "As foundation models advance and agent scaffolding becomes increasingly sophisticated, agents have demonstrated remarkable proficiency in complex, long-horizon coding tasks and even autonomous experiment execution. Despite their evolution from research assistants into autonomous research agents, these systems still exhibit significant limitations in field sensitivity, research ethics, and nuanced scientific judgment. Consequently, frontier agents remain unable to fully replace human researchers. To bridge this gap, we conceptualize the AARR (Act As a Real Researcher) benchmark series. Unlike existing benchmarks that primarily assess macro-level execution capabilities, AARR focuses on whether agents can emulate the professionalism, thoroughness, and nuanced reasoning that characterize human researchers in granular research scenarios. In this work, we propose AARRI-Bench (Act As a Real Research Intern), the first benchmark in this series. We conduct extensive experiments across frontier models and agentic systems, revealing that even the best-performing configuration (Mini-SWE-Agent with Claude Opus 4.7) achieves only 68.3\\% success rate, frequently overlooking subtle yet critical details that are obvious to real human researchers. Our results indicate that developing researcher-like AI requires further exploration of research behavior, rather than merely complex scaffolding. Our data is released at https://github.com/AARR-bench/AARRI-bench.",
+      "published": "2026-06-05",
+      "updated": "2026-06-08T12:40:04.485113+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "arxiv_url": "http://arxiv.org/abs/2606.07462v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07462v1",
+      "score": 66.0,
+      "score_breakdown": {
+        "relevance": 19.0,
+        "contribution": 100,
+        "method_clarity": 95.0,
+        "evidence": 70.0,
+        "freshness": 100.0,
+        "readability": 92.5
+      },
+      "rank_reason": "该论文【可作为候选】。它在贡献价值、新鲜度方面表现较好。摘要中包含较明确的实验或理论支撑，适合作为重点阅读或复现参考。摘要结构清晰，问题-方法-结果均有体现，适合快速理解核心思路。与当前搜索关键词匹配一般，建议确认是否与研究方向相关。",
+      "recommendation_level": "可作为候选",
+      "is_new": false,
+      "status": "unread",
+      "first_seen_at": "2026-06-08T12:30:25.182592+00:00",
+      "last_seen_at": "2026-06-08T12:40:04.485113+00:00",
+      "source_watch_ids": [
+        "watch_f19ba6f08ca2"
+      ],
+      "source_watch_names": [
+        "agent"
+      ]
+    },
+    "arxiv_2606.07512": {
+      "paper_id": "arxiv_2606.07512",
+      "arxiv_id": "2606.07512v1",
+      "title": "MemDreamer: Decoupling Perception and Reasoning for Long Video Understanding via Hierarchical Graph Memory and Agentic Retrieval Mechanism",
+      "authors": [
+        "Cong Chen",
+        "Guo Gan",
+        "Kaixiang Ji",
+        "ChaoYang Zhang",
+        "Zhen Yang",
+        "Guangming Yao",
+        "Hao Chen",
+        "Jingdong Chen",
+        "Yi Yuan",
+        "Chunhua Shen"
+      ],
+      "summary": "Current Vision-Language Models struggle with hours-long videos because processing full-length visual sequences induces prohibitive token explosion and attention dilution. To overcome this, we introduce MemDreamer to decouple perception and reasoning, shifting long-video understanding into an agentic exploration process. As a plug-and-play framework, it incrementally streams videos to construct a Hierarchical Graph Memory, a top-down three-tier architecture for semantic abstraction, anchored by a foundational graph capturing spatiotemporal and causal relations. During inference, the reasoning model employs agentic tool-augmented retrieval, navigating hierarchies, searching nodes, and traversing logical edges via an Observation-Reason-Action loop. Experiments show MemDreamer achieves SOTA results across four mainstream benchmarks, narrowing the gap with human experts to only 3.7 points. It constrains the reasoning context window to merely 2% of full-context ingestion while delivering a 12.5 point absolute accuracy gain. Furthermore, statistical analysis uncovers a strong positive linear correlation between an VLM's performance on logic reasoning and long-video understanding benchmarks, establishing agentic capability scaling as a new paradigm for multimodal comprehension.",
+      "published": "2026-06-05",
+      "updated": "2026-06-08T12:40:04.485113+00:00",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV",
+      "arxiv_url": "http://arxiv.org/abs/2606.07512v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07512v1",
+      "score": 65.0,
+      "score_breakdown": {
+        "relevance": 0.0,
+        "contribution": 100,
+        "method_clarity": 100,
+        "evidence": 100,
+        "freshness": 100.0,
+        "readability": 100.0
+      },
+      "rank_reason": "该论文【可作为候选】。它在贡献价值、方法清晰度方面表现较好。摘要中包含较明确的实验或理论支撑，适合作为重点阅读或复现参考。摘要结构清晰，问题-方法-结果均有体现，适合快速理解核心思路。与当前搜索关键词匹配一般，建议确认是否与研究方向相关。",
+      "recommendation_level": "可作为候选",
+      "is_new": false,
+      "status": "unread",
+      "first_seen_at": "2026-06-08T12:30:25.182592+00:00",
+      "last_seen_at": "2026-06-08T12:40:04.485113+00:00",
+      "source_watch_ids": [
+        "watch_f19ba6f08ca2"
+      ],
+      "source_watch_names": [
+        "agent"
+      ]
+    },
+    "arxiv_2606.07496": {
+      "paper_id": "arxiv_2606.07496",
+      "arxiv_id": "2606.07496v1",
+      "title": "Accelerated Decentralized Stochastic Gradient Descent for Strongly Convex Optimization",
+      "authors": [
+        "Ming Sun",
+        "Kun Yuan"
+      ],
+      "summary": "Decentralized stochastic optimization is a fundamental paradigm for large-scale learning over networks, where agents communicate only with their neighbors and no central coordinator is required. For strongly convex problems, communication efficiency is mainly determined by the condition number \\(κ=L/μ\\) and the network spectral gap \\(1-β\\). Although deterministic decentralized methods can simultaneously achieve accelerated \\(\\sqrtκ\\) and \\(1/\\sqrt{1-β}\\) dependences, no existing stochastic method attains both improvements at once. In this paper, we propose \\emph{Multi-Gossip Accelerated DSGD} (MG-ADSGD), a decentralized stochastic algorithm that combines Nesterov-type primal--dual extrapolation with multi-round fast gossip averaging. The key idea is to couple the gossip depth with the mini-batch size so that additional communication rounds simultaneously improve consensus accuracy and reduce gradient variance. We show that MG-ADSGD achieves the communication complexity \\[ \\widetilde{\\mathcal O}\\!\\left( \\frac{σ^2}{μnε}\\log\\frac{1}ε + \\sqrt{\\fracκ{1-β}}\\log\\frac{1}ε \\right), \\] where \\(ε\\) denotes the target accuracy, \\(n\\) is the number of nodes, and \\(σ^2\\) is the gradient variance. To the best of our knowledge, this bound yields the best currently available communication complexity for decentralized stochastic strongly convex optimization, up to logarithmic factors that are independent of $ε$.",
+      "published": "2026-06-05",
+      "updated": "2026-06-08T12:40:04.485113+00:00",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "arxiv_url": "http://arxiv.org/abs/2606.07496v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07496v1",
+      "score": 64.3,
+      "score_breakdown": {
+        "relevance": 11.5,
+        "contribution": 95.0,
+        "method_clarity": 100,
+        "evidence": 75.0,
+        "freshness": 100.0,
+        "readability": 100.0
+      },
+      "rank_reason": "该论文【可作为候选】。它在方法清晰度、新鲜度方面表现较好。摘要中包含较明确的实验或理论支撑，适合作为重点阅读或复现参考。摘要结构清晰，问题-方法-结果均有体现，适合快速理解核心思路。与当前搜索关键词匹配一般，建议确认是否与研究方向相关。",
+      "recommendation_level": "可作为候选",
+      "is_new": false,
+      "status": "unread",
+      "first_seen_at": "2026-06-08T12:30:25.182592+00:00",
+      "last_seen_at": "2026-06-08T12:40:04.485113+00:00",
+      "source_watch_ids": [
+        "watch_f19ba6f08ca2"
+      ],
+      "source_watch_names": [
+        "agent"
+      ]
+    },
+    "arxiv_2606.07487": {
+      "paper_id": "arxiv_2606.07487",
+      "arxiv_id": "2606.07487v1",
+      "title": "Modelling Opinion Dynamics at Scale with Deep MARL",
+      "authors": [
+        "Lukas Seier",
+        "Brandon Kaplowitz",
+        "Sebastian Towers",
+        "Richard Bailey",
+        "Jakob Foerster"
+      ],
+      "summary": "Modelling opinion dynamics typically relies on hand-crafted local interaction rules to study emergent macroscopic phenomena such as consensus and polarisation. In contrast, multi-agent reinforcement learning (MARL) enables agents to learn such behaviours directly by optimising simple rewards. To explore the potential of MARL for opinion dynamics, we introduce a GPU-accelerated consensus and truth-finding game that scales to populations of up to 1000 agents, comparable to many real-world social sub-networks. To prevent unrealistic conventions, we extend other-play to general-sum social interactions. We next validate our model on a subset of the Bluesky network by recovering agent importance structures from graph topology alone via a learned attention layer, finding that highly conforming populations most closely match human data. In large social media networks such high levels of conformity significantly reduce collective accuracy and promote dishonest agents that lie to fit in. By contrast, small, dynamic hunter-gatherer networks are less affected; here, conformity can even improve collective agreement. This suggests a mismatch between evolved human conformity heuristics and modern social media environments as a potential contributor to misinformation.",
+      "published": "2026-06-05",
+      "updated": "2026-06-08T12:40:04.485113+00:00",
+      "categories": [
+        "cs.MA"
+      ],
+      "primary_category": "cs.MA",
+      "arxiv_url": "http://arxiv.org/abs/2606.07487v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07487v1",
+      "score": 62.1,
+      "score_breakdown": {
+        "relevance": 17.5,
+        "contribution": 100,
+        "method_clarity": 85.0,
+        "evidence": 55.0,
+        "freshness": 100.0,
+        "readability": 100.0
+      },
+      "rank_reason": "该论文【可作为候选】。它在贡献价值、新鲜度方面表现较好。摘要结构清晰，问题-方法-结果均有体现，适合快速理解核心思路。与当前搜索关键词匹配一般，建议确认是否与研究方向相关。",
+      "recommendation_level": "可作为候选",
+      "is_new": false,
+      "status": "unread",
+      "first_seen_at": "2026-06-08T12:30:25.182592+00:00",
+      "last_seen_at": "2026-06-08T12:40:04.485113+00:00",
+      "source_watch_ids": [
+        "watch_f19ba6f08ca2"
+      ],
+      "source_watch_names": [
+        "agent"
+      ]
+    },
+    "arxiv_2606.07489": {
+      "paper_id": "arxiv_2606.07489",
+      "arxiv_id": "2606.07489v1",
+      "title": "How AI Agents Reshape Knowledge Work: Autonomy, Efficiency, and Scope",
+      "authors": [
+        "Jeremy Yang",
+        "Kate Zyskowski",
+        "Noah Yonack",
+        "Jerry Ma"
+      ],
+      "summary": "Frontier AI systems are bridging the gap between intelligence and utility by shifting from conversational assistants to autonomous agents that execute tasks end to end. Using production data from Perplexity's Search and Computer products, we study this transition by examining how AI agents accelerate and reshape knowledge work. Three key empirical findings emerge. First, using sessions with near-identical initial query pairs as natural experiments for the same underlying task attempted with both products, Computer performs 26 minutes of autonomous work per user session, versus 33 seconds for Search. Computer automates task decomposition and execution that Search users might otherwise manually orchestrate and implement. As a result, Computer shifts follow-up query distribution toward higher-order work such as verification and extension. Autonomy also increases execution quality, with per-query dissatisfaction rates 55% lower on Computer than on Search. Second, due to its autonomy advantage, Computer reduces completion time from 269 to 36 minutes on matched tasks, lowering estimated time and cost by 87% and 94%, respectively, compared to humans equipped with Search alone. Third, Computer changes the scope of work that users attempt: Computer queries more often cross occupational boundaries, require higher-order cognition, draw on broader expertise, take the form of composite tasks that bundle interdependent subtasks into a single query, and unlock work activities that are essentially absent from Search usage among the same users. Together, the evidence indicates that AI agents accelerate workflows, enhance output quality, reduce costs, and expand the breadth and depth of automated work.",
+      "published": "2026-06-05",
+      "updated": "2026-06-08T12:40:04.485113+00:00",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "arxiv_url": "http://arxiv.org/abs/2606.07489v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07489v1",
+      "score": 61.4,
+      "score_breakdown": {
+        "relevance": 31.0,
+        "contribution": 80.0,
+        "method_clarity": 65.0,
+        "evidence": 70.0,
+        "freshness": 100.0,
+        "readability": 85.5
+      },
+      "rank_reason": "该论文【可作为候选】。它在新鲜度、可读性方面表现较好。摘要中包含较明确的实验或理论支撑，适合作为重点阅读或复现参考。与当前搜索关键词匹配一般，建议确认是否与研究方向相关。",
+      "recommendation_level": "可作为候选",
+      "is_new": false,
+      "status": "unread",
+      "first_seen_at": "2026-06-08T12:30:25.182592+00:00",
+      "last_seen_at": "2026-06-08T12:40:04.485113+00:00",
+      "source_watch_ids": [
+        "watch_f19ba6f08ca2"
+      ],
+      "source_watch_names": [
+        "agent"
+      ]
+    },
+    "arxiv_2606.07485": {
+      "paper_id": "arxiv_2606.07485",
+      "arxiv_id": "2606.07485v1",
+      "title": "Quantum correlations in QBism's reconstruction program",
+      "authors": [
+        "Sachin Gupta",
+        "Jacques Pienaar"
+      ],
+      "summary": "QBism recasts quantum theory as a normative framework for an agent's probability assignments, with the Born rule taking the form of a consistency condition known as the Urgleichung. Motivated by this perspective, qplex theories provide a broader class of probabilistic models in which the sets of valid states and measurements are constrained by QBist-inspired geometric conditions. While qplexes have been extensively studied for single systems, their implications for bipartite correlations remain largely unexplored. In this work, we investigate bipartite correlations in qplex theories by expressing joint expectation values as inner products between suitably defined $C$-vectors. This geometric formulation allows Bell-type inequalities to be studied as optimization problems over qplex-compatible probability assignments. We first analyze the CHSH scenario and show that the shared inner-product structure of the $C$-vectors restricts the maximal value to the Tsirelson bound $2\\sqrt{2}$. We then turn to the three-outcome CGLMP inequality $I_{2233}$ and find that the same qplex-derived norm and inner-product constraints allow the algebraic maximum of 4, thereby exhibiting superquantum correlations. These results show that qplex geometry captures enough structure to reproduce an important quantum bound in the two-outcome case, but not enough to recover the full set of quantum correlation constraints. The analysis therefore suggests that additional principles are needed to complete the QBist reconstruction of quantum theory.",
+      "published": "2026-06-05",
+      "updated": "2026-06-08T12:40:04.485113+00:00",
+      "categories": [
+        "quant-ph"
+      ],
+      "primary_category": "quant-ph",
+      "arxiv_url": "http://arxiv.org/abs/2606.07485v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07485v1",
+      "score": 61.3,
+      "score_breakdown": {
+        "relevance": 11.5,
+        "contribution": 80.0,
+        "method_clarity": 100,
+        "evidence": 75.0,
+        "freshness": 100.0,
+        "readability": 100.0
+      },
+      "rank_reason": "该论文【可作为候选】。它在方法清晰度、新鲜度方面表现较好。摘要中包含较明确的实验或理论支撑，适合作为重点阅读或复现参考。摘要结构清晰，问题-方法-结果均有体现，适合快速理解核心思路。与当前搜索关键词匹配一般，建议确认是否与研究方向相关。",
+      "recommendation_level": "可作为候选",
+      "is_new": false,
+      "status": "unread",
+      "first_seen_at": "2026-06-08T12:30:25.182592+00:00",
+      "last_seen_at": "2026-06-08T12:40:04.485113+00:00",
+      "source_watch_ids": [
+        "watch_f19ba6f08ca2"
+      ],
+      "source_watch_names": [
+        "agent"
+      ]
+    },
+    "arxiv_2606.07437": {
+      "paper_id": "arxiv_2606.07437",
+      "arxiv_id": "2606.07437v1",
+      "title": "Re-imagining ISO 26262 in the Age of Autonomous Vehicles: Enhancing Controllability through Transferability and Predictability",
+      "authors": [
+        "Chaitanya Shinde",
+        "Hadi Hajieghrary",
+        "Paul Schmitt",
+        "Adam Shoemaker",
+        "Bodo Seifert",
+        "Steve Kenner"
+      ],
+      "summary": "The ISO 26262 standard defines functional safety for road vehicles through risk assessments based on Severity, Exposure, and Controllability, grounded in a human-driven vehicle paradigm. In the context of autonomous vehicles (AVs), the absence of a human driver necessitates revisiting these principles. This paper decomposes the Controllability placeholder into two auditable evidence dimensions of ISO 26262 by introducing two measurable sub-concepts: Transferability and Predictability. Transferability extends Controllability to capture AV systems' ability to hand off control to dedicated fallback safety mechanisms, while Predictability captures how easily external agents can anticipate AV behavior. Predictability is formally defined from human-robot interaction-inspired principles, and a mathematical framework is provided to quantify it. A designed-versus-achievable gap is introduced to distinguish architectural fallback claims from scene-conditioned achievable fallback capability. The proposed metrics align with ISO 26262 and ISO/PAS 21448 (SOTIF), rendering fallback and interaction claims falsifiable and traceable across ODD slices. These dimensions complement rather than replace existing standards, and the enhancements preserve the structure of ISO 26262 while extending its applicability to driverless automated systems operating at SAE Levels 4 and 5.",
+      "published": "2026-06-05",
+      "updated": "2026-06-08T12:40:04.485113+00:00",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO",
+      "arxiv_url": "http://arxiv.org/abs/2606.07437v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07437v1",
+      "score": 50.1,
+      "score_breakdown": {
+        "relevance": 24.5,
+        "contribution": 50.0,
+        "method_clarity": 85.0,
+        "evidence": 25.0,
+        "freshness": 100.0,
+        "readability": 100.0
+      },
+      "rank_reason": "该论文【低优先级】。它在新鲜度、可读性方面表现较好。摘要结构清晰，问题-方法-结果均有体现，适合快速理解核心思路。与当前搜索关键词匹配一般，建议确认是否与研究方向相关。",
+      "recommendation_level": "低优先级",
+      "is_new": false,
+      "status": "unread",
+      "first_seen_at": "2026-06-08T12:30:25.182592+00:00",
+      "last_seen_at": "2026-06-08T12:40:04.485113+00:00",
+      "source_watch_ids": [
+        "watch_f19ba6f08ca2"
+      ],
+      "source_watch_names": [
+        "agent"
+      ]
+    },
+    "arxiv_2606.07448": {
+      "paper_id": "arxiv_2606.07448",
+      "arxiv_id": "2606.07448v1",
+      "title": "Agentic Very Much! Adoption of Coding Agent in New GitHub Projects",
+      "authors": [
+        "Romain Robbes",
+        "Théo Matricon",
+        "Thomas Degueule",
+        "Andre Hora",
+        "Stefano Zacchiroli"
+      ],
+      "summary": "In previous work, we investigated the adoption of coding agents in GitHub projects, finding that it was very significant. This study follows this line of work, but analyses new projects, that were created after the previous study. In this new sample, we find that the adoption of coding agents is more than twice as high. We also find that the adoption is significantly more intensive, as the proportion of AI-assisted commits is sensibly higher, despite strong signs that we do not detect all of it.",
+      "published": "2026-06-05",
+      "updated": "2026-06-08T12:40:04.485113+00:00",
+      "categories": [
+        "cs.SE"
+      ],
+      "primary_category": "cs.SE",
+      "arxiv_url": "http://arxiv.org/abs/2606.07448v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07448v1",
+      "score": 43.5,
+      "score_breakdown": {
+        "relevance": 29.5,
+        "contribution": 50.0,
+        "method_clarity": 35.0,
+        "evidence": 25.0,
+        "freshness": 100.0,
+        "readability": 82.5
+      },
+      "rank_reason": "该论文【低优先级】。它在新鲜度、可读性方面表现较好。当前摘要中实验/理论支撑信号不明显，建议阅读正文确认。与当前搜索关键词匹配一般，建议确认是否与研究方向相关。",
+      "recommendation_level": "低优先级",
+      "is_new": false,
+      "status": "unread",
+      "first_seen_at": "2026-06-08T12:30:25.182592+00:00",
+      "last_seen_at": "2026-06-08T12:40:04.485113+00:00",
+      "source_watch_ids": [
+        "watch_f19ba6f08ca2"
+      ],
+      "source_watch_names": [
+        "agent"
+      ]
+    },
+    "arxiv_2606.07514": {
+      "paper_id": "arxiv_2606.07514",
+      "arxiv_id": "2606.07514v1",
+      "title": "UniSHARP: Universal Sharp Monocular View Synthesis",
+      "authors": [
+        "Meixi Song",
+        "Dizhe Zhang",
+        "Hao Ren",
+        "Ruiyang Zhang",
+        "Bo Du",
+        "Ming-Hsuan Yang",
+        "Lu Qi"
+      ],
+      "summary": "In this work, we focus on extending SHARP, the popular photorealistic view synthesis method, for universal monocular rendering across a continuum of camera systems, from conventional perspective cameras to wide-field-of-view, fisheye and omnidirectional panoramic settings. To overcome the pinhole-specific assumptions of SHARP, our key idea is to align various images in a unified omnidirectional latent space. Thus, we propose UniSHARP, which performs implicit alignment in both feature and Gaussian spaces. Specifically, Gaussian primitives are arranged along rays and radial distances in a ray-based universal representation, while 2D semantic and 3D spatial features extracted from UniK3D-inspired encoders are jointly decoded to generate the complete Gaussian cloud. To comprehensively evaluate our method, we construct a benchmark covering diverse imaging systems across various scenes. The benchmark is further stratified by field of view (FoV) to enable fine-grained assessment of the universal monocular rendering task. Extensive experiments on the proposed benchmark demonstrate the effectiveness of UniSHARP, outperforming alternative methods by a large margin. The project page can be found at: https://insta360-research-team.github.io/Unisharp-website/",
+      "published": "2026-06-05",
+      "updated": "2026-06-08T12:40:04.866653+00:00",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV",
+      "arxiv_url": "http://arxiv.org/abs/2606.07514v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07514v1",
+      "score": 60.5,
+      "score_breakdown": {
+        "relevance": 0.0,
+        "contribution": 100,
+        "method_clarity": 100,
+        "evidence": 70.0,
+        "freshness": 100.0,
+        "readability": 100.0
+      },
+      "rank_reason": "该论文【可作为候选】。它在贡献价值、方法清晰度方面表现较好。摘要中包含较明确的实验或理论支撑，适合作为重点阅读或复现参考。摘要结构清晰，问题-方法-结果均有体现，适合快速理解核心思路。与当前搜索关键词匹配一般，建议确认是否与研究方向相关。",
+      "recommendation_level": "可作为候选",
+      "is_new": false,
+      "status": "unread",
+      "first_seen_at": "2026-06-08T12:39:24.451929+00:00",
+      "last_seen_at": "2026-06-08T12:40:04.866653+00:00",
+      "source_watch_ids": [
+        "watch_60e91c031167"
+      ],
+      "source_watch_names": [
+        "llm"
+      ]
+    },
+    "arxiv_2606.07500": {
+      "paper_id": "arxiv_2606.07500",
+      "arxiv_id": "2606.07500v1",
+      "title": "Sparse Subspace-to-Expert Sharing for Task-Agnostic Continual Learning",
+      "authors": [
+        "Fatema Siddika",
+        "Md Anwar Hossen",
+        "Tanwi Mallick",
+        "Ali Jannesari"
+      ],
+      "summary": "Continual learning in Large Language Models (LLMs) is hindered by the plasticity-stability dilemma, where acquiring new capabilities often leads to catastrophic forgetting of previous knowledge. Existing methods typically treat parameters uniformly, failing to distinguish between specific task knowledge and shared capabilities. We introduce Mixture of Sparse Experts for Task Agnostic Continual Learning (SETA), a framework that resolves the plasticity-stability conflict through adaptive sparse subspace decomposition into task-specific expert modules. Unlike standard updates, where tasks compete for the same parameters, SETA separates knowledge into unique experts, designed to isolate task-specific patterns, and shared experts, responsible for capturing common features. This structure is maintained through adaptive elastic anchoring and a routing-aware regularization that jointly protect shared knowledge at both the weight and routing levels and enable a unified gating network to automatically retrieve the correct expert combination during inference. Extensive experiments across diverse domain-specific benchmarks demonstrate that SETA achieves competitive or superior overall performance relative to state-of-the-art continual learning baselines, with particularly strong retention of early-task knowledge and improved backward transfer on LLaMA-2 7B and Qwen3-4B.",
+      "published": "2026-06-05",
+      "updated": "2026-06-08T12:40:04.866653+00:00",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "arxiv_url": "http://arxiv.org/abs/2606.07500v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07500v1",
+      "score": 60.5,
+      "score_breakdown": {
+        "relevance": 0.0,
+        "contribution": 100,
+        "method_clarity": 100,
+        "evidence": 70.0,
+        "freshness": 100.0,
+        "readability": 100.0
+      },
+      "rank_reason": "该论文【可作为候选】。它在贡献价值、方法清晰度方面表现较好。摘要中包含较明确的实验或理论支撑，适合作为重点阅读或复现参考。摘要结构清晰，问题-方法-结果均有体现，适合快速理解核心思路。与当前搜索关键词匹配一般，建议确认是否与研究方向相关。",
+      "recommendation_level": "可作为候选",
+      "is_new": false,
+      "status": "unread",
+      "first_seen_at": "2026-06-08T12:39:24.451929+00:00",
+      "last_seen_at": "2026-06-08T12:40:04.866653+00:00",
+      "source_watch_ids": [
+        "watch_60e91c031167"
+      ],
+      "source_watch_names": [
+        "llm"
+      ]
+    },
+    "arxiv_2606.07515": {
+      "paper_id": "arxiv_2606.07515",
+      "arxiv_id": "2606.07515v1",
+      "title": "How reliable are LLMs when it comes to playing dice?",
+      "authors": [
+        "Luca Avena",
+        "Gianmarco Bet",
+        "Bernardo Busoni"
+      ],
+      "summary": "We investigate the probabilistic reasoning capabilities of large language models through a controlled benchmarking study on discrete probability problems. We constructed two datasets, respectively a set of standard exercises and a set of counterintuitive exercises, designed to trigger heuristic reasoning, and evaluated 8 state-of-the-art models, each tested with and without Chain-of-Thought prompting. Models achieve an average accuracy of 0.96 on standard problems but only 0.59 on counterintuitive ones. We further provide empirical evidence of token bias: performance drops by over 20% when canonical formulations are replaced by disguised variants. Embedding misleading suggestions in the prompt reduces performance by up to 34%, with no model proving immune. Taken together, the reported findings suggest that current LLMs are not yet genuine probabilistic reasoners, despite their success in advanced mathematical problems.",
+      "published": "2026-06-05",
+      "updated": "2026-06-08T12:40:04.866653+00:00",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "arxiv_url": "http://arxiv.org/abs/2606.07515v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07515v1",
+      "score": 55.8,
+      "score_breakdown": {
+        "relevance": 0.0,
+        "contribution": 65.0,
+        "method_clarity": 100,
+        "evidence": 85.0,
+        "freshness": 100.0,
+        "readability": 100.0
+      },
+      "rank_reason": "该论文【可作为候选】。它在方法清晰度、新鲜度方面表现较好。摘要中包含较明确的实验或理论支撑，适合作为重点阅读或复现参考。摘要结构清晰，问题-方法-结果均有体现，适合快速理解核心思路。与当前搜索关键词匹配一般，建议确认是否与研究方向相关。",
+      "recommendation_level": "可作为候选",
+      "is_new": false,
+      "status": "unread",
+      "first_seen_at": "2026-06-08T12:39:24.451929+00:00",
+      "last_seen_at": "2026-06-08T12:40:04.866653+00:00",
+      "source_watch_ids": [
+        "watch_60e91c031167"
+      ],
+      "source_watch_names": [
+        "llm"
+      ]
+    },
+    "arxiv_2606.07511": {
+      "paper_id": "arxiv_2606.07511",
+      "arxiv_id": "2606.07511v1",
+      "title": "GJ 3929 b as the First Complete Rocky Worlds DDT Data Set",
+      "authors": [
+        "Nicholas J. Connors",
+        "Christopher Monaghan",
+        "Bjorn Benneke",
+        "Lisa Dang",
+        "Pierre-Alexis Roy"
+      ],
+      "summary": "Despite their large abundance, it is still unknown whether and under what conditions rocky planets around M dwarf stars can host atmospheres. This open question motivated the on-going Rocky Worlds DDT survey focused on searching for atmospheres on relatively low-temperature rocky exoplanets by systematically probing for the presence of day-night heat redistribution and CO2 absorption through JWST/MIRI 15 $μ$m eclipse observations. Here we present the analysis of the first full data set from this survey, consisting of four observations of the warm Earth-size exoplanet GJ 3929 b, with a planetary mass of 1.75+0.44-0.45 M$_\\oplus$ and instellation flux of 17.3+/-0.7 S$_\\oplus$. In our analysis, we include two previously unpublished eclipse observations and find an overall eclipse depth of 118+/-22 ppm and a dayside surface brightness temperature of 641+59-64 K. This is marginally lower than the eclipse depth of 160+26-27 ppm previously reported based on only the first two observations. While the full data set remains consistent with bare rock scenarios, it also leaves more room for thin atmosphere scenarios. Only thick CO2 atmospheres without thermal inversion remain ruled out at greater than 3$σ$. We also continue with lessons-learned in robustly analyzing these kind of high-precision JWST/MIRI 15 $μ$m eclipse observations. Notably, we find that the Frame Normalized Principal Component Analysis (FN-PCA) method appears more robust against the choice of extraction aperture size, which otherwise can have a significant impact on the inferred eclipse depth and scientific conclusions when using a standard polynomial baseline detrending method.",
+      "published": "2026-06-05",
+      "updated": "2026-06-08T12:40:04.866653+00:00",
+      "categories": [
+        "astro-ph.EP"
+      ],
+      "primary_category": "astro-ph.EP",
+      "arxiv_url": "http://arxiv.org/abs/2606.07511v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07511v1",
+      "score": 55.8,
+      "score_breakdown": {
+        "relevance": 10.666666666666666,
+        "contribution": 65,
+        "method_clarity": 75.0,
+        "evidence": 90.0,
+        "freshness": 100.0,
+        "readability": 85.5
+      },
+      "rank_reason": "该论文【可作为候选】。它在新鲜度、证据支撑方面表现较好。该论文可能是综述/概览类文章，适合作为领域背景阅读。摘要中包含较明确的实验或理论支撑，适合作为重点阅读或复现参考。摘要结构清晰，问题-方法-结果均有体现，适合快速理解核心思路。与当前搜索关键词匹配一般，建议确认是否与研究方向相关。",
+      "recommendation_level": "可作为候选",
+      "is_new": false,
+      "status": "unread",
+      "first_seen_at": "2026-06-08T12:39:24.451929+00:00",
+      "last_seen_at": "2026-06-08T12:40:04.866653+00:00",
+      "source_watch_ids": [
+        "watch_60e91c031167"
+      ],
+      "source_watch_names": [
+        "llm"
+      ]
+    },
+    "arxiv_2606.07497": {
+      "paper_id": "arxiv_2606.07497",
+      "arxiv_id": "2606.07497v1",
+      "title": "The Roasting Marshmallows Program with IGRINS on Gemini South V: Atmosphere of MASCARA-1b is Enriched in Refractory Elements",
+      "authors": [
+        "Krishna Kanumalla",
+        "Michael R. Line",
+        "Martina Chiarella",
+        "Matteo Brogi",
+        "Peter C. B. Smith",
+        "Jorge A. Sanchez",
+        "Yayaati Chachan",
+        "Joshua Lothringer",
+        "Joost P. Wardenier",
+        "Hayley Beltz",
+        "Carlos Saffe",
+        "Emily K. Deibert",
+        "Megan Weiner Mansfield",
+        "Stefan Pelletier",
+        "Vivien Parmentier",
+        "Yeon-ho Choi",
+        "Swaetha Ramkumar",
+        "Arjun B. Savel",
+        "Luis Welbanks",
+        "Jacob L. Bean",
+        "Vatsal Panwar",
+        "Tomás Azevedo Silva",
+        "Lorenzo Pino",
+        "Yuya Hayashi",
+        "Dongwook Lim",
+        "Cicero X. Lu",
+        "Venu M. Kalari",
+        "Teo Močnik",
+        "Mark G. Rawlings",
+        "Heeyoung Oh",
+        "Ruben J. Diaz",
+        "Chan Park",
+        "Jae-Joon Lee",
+        "Sanghyuk Kim",
+        "Ueejeong Jeong",
+        "Hye-In Lee",
+        "Woojin Park",
+        "Youngsam Yu",
+        "Yunjong Kim",
+        "Moo-Young Chun",
+        "Jae Sok Oh",
+        "Sungho Lee",
+        "Jeong-Gyun Jang",
+        "Bi-Ho Jang",
+        "Hyeon Cheol Seong",
+        "Hyun-Jeong Kim",
+        "Cynthia B. Brooks",
+        "Gregory N. Mace",
+        "Hanshin Lee",
+        "John M. Good",
+        "Daniel T. Jaffe",
+        "Kang-Min Kim",
+        "In-Soo Yuk",
+        "Narae Hwang",
+        "Byeong-Gon Park",
+        "Hwihyun Kim",
+        "Brian Chinn",
+        "Francisco Ramos",
+        "Pablo Prado",
+        "John White",
+        "Andres Olivares",
+        "Valentina Oyarzun",
+        "Emma Kurz",
+        "Hawi Stecher",
+        "Carlos Quiroz",
+        "Ignacio Arriagada",
+        "Thomas L. Hayward",
+        "Hyewon Suh",
+        "Jen Miller",
+        "Siyi Xu",
+        "Emanuele Paolo Farina",
+        "Charlie Figura",
+        "Andrew Stephens",
+        "Bryan Miller",
+        "Kathleen Labrie",
+        "Paul Hirst",
+        "Edo Tapia",
+        "Zachary Hartmann"
+      ],
+      "summary": "Ultra-hot Jupiters (UHJs; $T_{\\rm eq} \\gtrsim 2000$ K) enable simultaneous detection of volatile (ice-forming) and refractory (rock-forming) species in planetary atmospheres, providing a powerful diagnostic of planet formation and atmospheric processing. We present a comprehensive high-resolution cross-correlation spectroscopy (HRCCS) analysis of the UHJ MASCARA-1b ($T_{\\rm eq} \\approx 2600$ K) using the IGRINS and IGRINS-2 spectrographs. We detect robust (SNR$>$4) signals from H$_2$O, CO, OH, Fe I, Mg I, Ca I, and Ti I, marking the most complete atmospheric inventory of MASCARA-1b to date. Using a chemically consistent atmospheric inference framework, we constrain elemental abundances to a typical precision of $\\approx$0.2 dex, retrieving a solar atmospheric metallicity ([M/H]$_\\odot$ $= 0.07^{+0.17}_{-0.13}$ $\\approx 1.2\\times$ solar), a C/O ratio (C/O $= 0.65^{+0.08}_{-0.08}$) consistent with solar value (C/O $=$ 0.59), an enhanced refractory abundance ([R/H]$_\\odot$ $= 0.40^{+0.23}_{-0.17} \\approx 2.5\\times$ solar; $\\approx 3.8\\times$ stellar), and a moderately super-solar refractory-to-volatile ratio ([R/V]$_\\odot$ $= 0.36^{+0.11}_{-0.09}$ $\\approx 2.3\\times$ solar). Comparison with formation models suggests that MASCARA-1b most likely accreted material between the soot-H$_2$O or H$_2$O-CO snowlines (at 68$\\%$ confidence). We additionally find stellar values for atmospheric Ti/Mg and Ca/Mg ratios (at 68$\\%$ confidence). The Mg/Fe is also found to be consistent with stellar value at 95$\\%$ confidence. Therefore, we do not find strong indication of nightside cold trapping in MASCARA-1b. As homogeneous refractory-to-volatile measurements expand across the UHJ population, particularly with upcoming Extremely Large Telescopes, these diagnostics will enable statistically robust tests of emerging trends in giant planet formation and atmospheric evolution.",
+      "published": "2026-06-05",
+      "updated": "2026-06-08T12:40:04.866653+00:00",
+      "categories": [
+        "astro-ph.EP"
+      ],
+      "primary_category": "astro-ph.EP",
+      "arxiv_url": "http://arxiv.org/abs/2606.07497v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07497v1",
+      "score": 55.1,
+      "score_breakdown": {
+        "relevance": 7.666666666666666,
+        "contribution": 95.0,
+        "method_clarity": 55.0,
+        "evidence": 75.0,
+        "freshness": 100.0,
+        "readability": 78.0
+      },
+      "rank_reason": "该论文【可作为候选】。它在新鲜度、贡献价值方面表现较好。摘要中包含较明确的实验或理论支撑，适合作为重点阅读或复现参考。与当前搜索关键词匹配一般，建议确认是否与研究方向相关。",
+      "recommendation_level": "可作为候选",
+      "is_new": false,
+      "status": "unread",
+      "first_seen_at": "2026-06-08T12:39:24.451929+00:00",
+      "last_seen_at": "2026-06-08T12:40:04.866653+00:00",
+      "source_watch_ids": [
+        "watch_60e91c031167"
+      ],
+      "source_watch_names": [
+        "llm"
+      ]
+    },
+    "arxiv_2606.07516": {
+      "paper_id": "arxiv_2606.07516",
+      "arxiv_id": "2606.07516v1",
+      "title": "Counterintuitive problems in discrete probability",
+      "authors": [
+        "Luca Avena",
+        "Gianmarco Bet",
+        "Bernardo Busoni"
+      ],
+      "summary": "This manuscript contains a collection of counterintuitive problems in discrete probability, together with detailed solutions. The dataset was constructed as part of a broader research project investigating the capabilities of the latest-generation Large Language Models (LLMs) in solving discrete probability problems, in order to assess whether LLMs tend to make systematic reasoning errors associated with known cognitive biases. The problems collected here are specifically designed to challenge heuristic reasoning strategies that often lead to intuitively appealing but mathematically incorrect conclusions. The dataset combines several types of problems. Some are adapted from classical probabilistic paradoxes and cognitive-bias literature, while others originate from recreational mathematics sources or were developed by ourselves following similar principles. The primary purpose of this document is to provide a transparent and publicly accessible reference for the problems used in our experimental evaluation of language models, as well as providing detailed human-made solutions. At the same time, we believe that this collection may also prove useful for future research on probabilistic reasoning, cognitive biases, and the evaluation of reasoning capabilities in artificial intelligence systems.",
+      "published": "2026-06-05",
+      "updated": "2026-06-08T12:40:04.866653+00:00",
+      "categories": [
+        "math.PR"
+      ],
+      "primary_category": "math.PR",
+      "arxiv_url": "http://arxiv.org/abs/2606.07516v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07516v1",
+      "score": 50.5,
+      "score_breakdown": {
+        "relevance": 0.0,
+        "contribution": 50.0,
+        "method_clarity": 100,
+        "evidence": 70.0,
+        "freshness": 100.0,
+        "readability": 100.0
+      },
+      "rank_reason": "该论文【低优先级】。它在方法清晰度、新鲜度方面表现较好。该论文可能是综述/概览类文章，适合作为领域背景阅读。摘要中包含较明确的实验或理论支撑，适合作为重点阅读或复现参考。摘要结构清晰，问题-方法-结果均有体现，适合快速理解核心思路。与当前搜索关键词匹配一般，建议确认是否与研究方向相关。",
+      "recommendation_level": "低优先级",
+      "is_new": false,
+      "status": "unread",
+      "first_seen_at": "2026-06-08T12:39:24.451929+00:00",
+      "last_seen_at": "2026-06-08T12:40:04.866653+00:00",
+      "source_watch_ids": [
+        "watch_60e91c031167"
+      ],
+      "source_watch_names": [
+        "llm"
+      ]
+    },
+    "arxiv_2606.07504": {
+      "paper_id": "arxiv_2606.07504",
+      "arxiv_id": "2606.07504v1",
+      "title": "On the large N convergence of matrix models",
+      "authors": [
+        "M. P. Garcia del Moral",
+        "P. León",
+        "A. Restuccia"
+      ],
+      "summary": "In this paper, the large N behavior of a supersymmetric matrix model is compared with its exact continuum description. We concentrate on the large N limit of a supersymmetric matrix model describing a supermembrane with central charge on a toroidally compactified target space. We analyze, on the one hand, the supermembrane model formulated on a differentiable compact torus without boundary, with structure group given by the area-preserving diffeomorphisms, and, on the other hand, the associated regularized $SU(N)$ model. We emphasize in our analysis the structure of the constraints of the regularized model, which generate the $SU(N)$ algebra and reproduce the area-preserving diffeomorphism algebra in the large N limit, together with the topological information associated with the central charge of the model. We explain the role of the central charge in the compactified supermembrane and how it allows a top-down $SU(N)$ regularization. It is known that the regularized model has discrete spectrum. We prove, in the semiclassical approximation of the models, that in the large N limit the eigenvalues of the Hamiltonian of the supersymmetric matrix model are in one to one correspondence with, and converge exactly to, the eigenvalues of the Hamiltonian of the supermembrane (M2-brane) with central charge. Finally, we discuss some physical consequences of this result.",
+      "published": "2026-06-05",
+      "updated": "2026-06-08T12:40:04.866653+00:00",
+      "categories": [
+        "hep-th"
+      ],
+      "primary_category": "hep-th",
+      "arxiv_url": "http://arxiv.org/abs/2606.07504v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07504v1",
+      "score": 49.0,
+      "score_breakdown": {
+        "relevance": 0.0,
+        "contribution": 50.0,
+        "method_clarity": 85.0,
+        "evidence": 75.0,
+        "freshness": 100.0,
+        "readability": 100.0
+      },
+      "rank_reason": "该论文【低优先级】。它在新鲜度、可读性方面表现较好。摘要中包含较明确的实验或理论支撑，适合作为重点阅读或复现参考。摘要结构清晰，问题-方法-结果均有体现，适合快速理解核心思路。与当前搜索关键词匹配一般，建议确认是否与研究方向相关。",
+      "recommendation_level": "低优先级",
+      "is_new": false,
+      "status": "unread",
+      "first_seen_at": "2026-06-08T12:39:24.451929+00:00",
+      "last_seen_at": "2026-06-08T12:40:04.866653+00:00",
+      "source_watch_ids": [
+        "watch_60e91c031167"
+      ],
+      "source_watch_names": [
+        "llm"
+      ]
+    },
+    "arxiv_2606.07507": {
+      "paper_id": "arxiv_2606.07507",
+      "arxiv_id": "2606.07507v1",
+      "title": "Ideals defining components of two-row Springer fibers",
+      "authors": [
+        "Cristina Sabando-Alvarez",
+        "Martha Precup"
+      ],
+      "summary": "Springer fibers are subvarieties of the flag variety parameterized by nilpotent matrices. They are central objects of study in geometry representation theory. This paper focuses on two-row Springer fibers, those corresponding to nilpotent matrices with two Jordan blocks. Irreducible components of two-row Springer fibers are in bijection with two-row standard Young tableaux and also with noncrossing matchings. Inspired by the combinatorial commutative algebra of matrix Schubert varieties, we define a polynomial ideal for each noncrossing matching and prove that these ideals define the corresponding components of the Springer fiber. Our proofs leverage geometric descriptions of Springer fibers established by Fung, Stroppel--Webster, Fresse, and Goldwasser--Nadeem--Sun--Tymoczko. Using these ideals to compute examples, we give two conjectural formulas for the cohomology class of each component of a two-row Springer fiber. We apply commutative algebra techniques to prove these conjectures for a specific family of two-row tableaux.",
+      "published": "2026-06-05",
+      "updated": "2026-06-08T12:40:04.866653+00:00",
+      "categories": [
+        "math.CO"
+      ],
+      "primary_category": "math.CO",
+      "arxiv_url": "http://arxiv.org/abs/2606.07507v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07507v1",
+      "score": 43.0,
+      "score_breakdown": {
+        "relevance": 0.0,
+        "contribution": 50.0,
+        "method_clarity": 65.0,
+        "evidence": 55.0,
+        "freshness": 100.0,
+        "readability": 100.0
+      },
+      "rank_reason": "该论文【低优先级】。它在新鲜度、可读性方面表现较好。与当前搜索关键词匹配一般，建议确认是否与研究方向相关。",
+      "recommendation_level": "低优先级",
+      "is_new": false,
+      "status": "unread",
+      "first_seen_at": "2026-06-08T12:39:24.451929+00:00",
+      "last_seen_at": "2026-06-08T12:40:04.866653+00:00",
+      "source_watch_ids": [
+        "watch_60e91c031167"
+      ],
+      "source_watch_names": [
+        "llm"
+      ]
+    },
+    "arxiv_2606.07509": {
+      "paper_id": "arxiv_2606.07509",
+      "arxiv_id": "2606.07509v1",
+      "title": "Bulk Superconductivity driven by Disorder-Induced Delocalization in 4Hb-Ta(S$_{1-x}$Se$_x$)$_2$",
+      "authors": [
+        "Lu Chen",
+        "Sae-Hee Ryu",
+        "Avior Almoalem",
+        "Yuanqi Lyu",
+        "Koh Yamakawa",
+        "Luke Pritchard Cairns",
+        "Ryan Day",
+        "Ehud Altman",
+        "Daniel Podolsky",
+        "Dung-Hai Lee",
+        "4 Vidya Madhavan",
+        "Eli Rotenberg",
+        "James G. Analytis"
+      ],
+      "summary": "The unconventional superconductor 4Hb-TaS$_2$ is a natural heterostructure that can be broadly understood as interleaving Mott-like and metallic layers. We study the properties of this material as a function of quenched disorder in the form of Se/S substitution and find that while disordered samples show bulk superconductivity, clean samples do not. We show that a disorder-driven delocalization of carriers in the Mott-like ($1T$-) layer forms a new Fermi surface that is absent in the cleanest samples. This suggests that one of the primary drivers for superconductivity is the fragility of the Mott state, whose delocalization brings to life a sea of strongly correlated electrons.",
+      "published": "2026-06-05",
+      "updated": "2026-06-08T12:40:04.866653+00:00",
+      "categories": [
+        "cond-mat.supr-con"
+      ],
+      "primary_category": "cond-mat.supr-con",
+      "arxiv_url": "http://arxiv.org/abs/2606.07509v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07509v1",
+      "score": 39.5,
+      "score_breakdown": {
+        "relevance": 0.0,
+        "contribution": 65.0,
+        "method_clarity": 55.0,
+        "evidence": 25.0,
+        "freshness": 100.0,
+        "readability": 89.00999999999999
+      },
+      "rank_reason": "该论文【暂不推荐优先读】。它在新鲜度、可读性方面表现较好。与当前搜索关键词匹配一般，建议确认是否与研究方向相关。",
+      "recommendation_level": "暂不推荐优先读",
+      "is_new": false,
+      "status": "unread",
+      "first_seen_at": "2026-06-08T12:39:24.451929+00:00",
+      "last_seen_at": "2026-06-08T12:40:04.866653+00:00",
+      "source_watch_ids": [
+        "watch_60e91c031167"
+      ],
+      "source_watch_names": [
+        "llm"
+      ]
+    }
+  },
+  "updated_at": "2026-06-08T12:40:04.866722+00:00"
+}

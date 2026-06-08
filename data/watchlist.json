@@ -1,0 +1,28 @@
+[
+  {
+    "id": "watch_f19ba6f08ca2",
+    "name": "agent",
+    "query": "agent safety",
+    "categories": [],
+    "max_results": 10,
+    "sort_by": "submittedDate",
+    "enabled": true,
+    "notes": "",
+    "created_at": "2026-06-08T12:30:21.210579+00:00",
+    "updated_at": "2026-06-08T12:30:21.210579+00:00",
+    "last_checked_at": "2026-06-08T12:40:04.122071+00:00"
+  },
+  {
+    "id": "watch_60e91c031167",
+    "name": "llm",
+    "query": "l l m",
+    "categories": [],
+    "max_results": 10,
+    "sort_by": "submittedDate",
+    "enabled": true,
+    "notes": "",
+    "created_at": "2026-06-08T12:39:16.441434+00:00",
+    "updated_at": "2026-06-08T12:39:16.441434+00:00",
+    "last_checked_at": "2026-06-08T12:40:04.491292+00:00"
+  }
+]

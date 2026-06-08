@@ -1,0 +1,201 @@
+[
+  {
+    "id": "1805.09320v2",
+    "title": "A New Approach for 4DVar Data Assimilation",
+    "authors": [
+      "Xiangjun Tian",
+      "Aiguo Dai",
+      "Xiaobing Feng",
+      "Hongqin Zhang",
+      "Rui Han",
+      "Lu Zhang"
+    ],
+    "published": "2018-05-23",
+    "abstract": "Four-dimensional variational data assimilation (4DVar) has become an increasingly important tool in data science with wide applications in many engineering and scientific fields such as geoscience1-12, biology13 and the financial industry14. The 4DVar seeks a solution that minimizes the departure from the background field and the mismatch between the forecast trajectory and the observations within an assimilation window. The current state-of-the-art 4DVar offers only two choices by using different forms of the forecast model: the strong- and weak-constrained 4DVar approaches15-16. The former ignores the model error and only corrects the initial condition error at the expense of reduced accuracy; while the latter accounts for both the initial and model errors and corrects them separately, which increases computational costs and uncertainty. To overcome these limitations, here we develop an integral correcting 4DVar (i4DVar) approach by treating all errors as a whole and correcting them simultaneously and indiscriminately. To achieve that, a novel exponentially decaying function is proposed to characterize the error evolution and correct it at each time step in the i4DVar. As a result, the i4DVar greatly enhances the capability of the strong-constrained 4DVar for correcting the model error while also overcomes the limitation of the weak-constrained 4DVar for being prohibitively expensive with added uncertainty. Numerical experiments with the Lorenz model show that the i4DVar significantly outperforms the existing 4DVar approaches. It has the potential to be applied in many scientific and engineering fields and industrial sectors in the big data era because of its ease of implementation and superior performance.",
+    "arxiv_url": "http://arxiv.org/abs/1805.09320v2",
+    "pdf_url": "https://arxiv.org/pdf/1805.09320v2",
+    "categories": [
+      "physics.data-an"
+    ],
+    "primary_category": "physics.data-an",
+    "journal_ref": "",
+    "comment": "",
+    "query_relevance_score": 1.0,
+    "query_relevance_reasons": [
+      "标题命中查询主题词：4dvar、4d-var、4d var、data assimilation。",
+      "摘要命中查询主题词：4dvar、4d-var、4d var、four-dimensional variational。"
+    ],
+    "query_relevance_matched_terms": [
+      "4dvar",
+      "4d-var",
+      "4d var",
+      "four-dimensional variational",
+      "four dimensional variational",
+      "four-dimensional variational data assimilation",
+      "four dimensional variational data assimilation",
+      "variational data assimilation",
+      "data assimilation"
+    ],
+    "query_relevance_weak": false
+  },
+  {
+    "id": "0902.2714v2",
+    "title": "Four-dimensional variational assimilation in the unstable subspace (4DVar-AUS) and the optimal subspace dimension",
+    "authors": [
+      "Anna Trevisan",
+      "Massimo D'Isidoro",
+      "Olivier Talagrand"
+    ],
+    "published": "2009-02-16",
+    "abstract": "A key a priori information used in 4DVar is the knowledge of the system's evolution equations. In this paper we propose a method for taking full advantage of the knowledge of the system's dynamical instabilities in order to improve the quality of the analysis. We present an algorithm, four-dimensional variational assimilation in the unstable subspace (4DVar-AUS), that consists in confining in this subspace the increment of the control variable. The existence of an optimal subspace dimension for this confinement is hypothesized. Theoretical arguments in favor of the present approach are supported by numerical experiments in a simple perfect non-linear model scenario. It is found that the RMS analysis error is a function of the dimension N of the subspace where the analysis is confined and is minimum for N approximately equal to the dimension of the unstable and neutral manifold. For all assimilation windows, from 1 to 5 days, 4DVar-AUS performs better than standard 4DVar. In the presence of observational noise, the 4DVar solution, while being closer to the observations, if farther away from the truth. The implementation of 4DVar-AUS does not require the adjoint integration.",
+    "arxiv_url": "http://arxiv.org/abs/0902.2714v2",
+    "pdf_url": "https://arxiv.org/pdf/0902.2714v2",
+    "categories": [
+      "nlin.CD"
+    ],
+    "primary_category": "nlin.CD",
+    "journal_ref": "",
+    "comment": "16 pages, 4 figures",
+    "query_relevance_score": 1.0,
+    "query_relevance_reasons": [
+      "标题命中查询主题词：4dvar、4d-var、4d var、four-dimensional variational。",
+      "摘要命中查询主题词：4dvar、4d-var、4d var、four-dimensional variational。"
+    ],
+    "query_relevance_matched_terms": [
+      "4dvar",
+      "4d-var",
+      "4d var",
+      "four-dimensional variational",
+      "four dimensional variational"
+    ],
+    "query_relevance_weak": false
+  },
+  {
+    "id": "2604.08596v1",
+    "title": "Comparing an Ensemble Kalman Filter to a 4DVAR Data Assimilation System in Chaotic Dynamics",
+    "authors": [
+      "Fabrício Pereira Harter",
+      "Cleber Souza Corrêa"
+    ],
+    "published": "2026-04-07",
+    "abstract": "In this paper, the Ensemble Kalman Filter is compared with a 4DVAR Data Assimilation System in chaotic dynamics. The Lorenz model is chosen for its simplicity in structure and its dynamical similarities with primitive equation models, such as modern numerical weather forecasting. It was examined whether the Ensemble Kalman Filter and 4DVAR are effective in tracking the control for 10%, 20%, and 40% of error in the initial conditions. With 10% of noise, the trajectories of both methods are almost perfect. With 20% of noise, the differences between the simulated trajectories and the observations, as well as the true trajectories, are rather small for the Ensemble Kalman Filter but almost perfect for 4DVAR. However, the differences become increasingly significant at the later part of the integration period for the Ensemble Kalman Filter, due to the chaotic behavior of the system. For the case with 40% error in the initial conditions, neither the Ensemble Kalman Filter nor 4DVAR could track the control with only three observations ingested. To evaluate a more realistic assimilation application, an experiment was created in which the Ensemble Kalman Filter ingested a single observation at the 180th time step in the X, Y, and Z Lorenz variables, and only in the X variable. The results show a perfect fit of 4DVAR and the control during a complete integration period, but the Ensemble Kalman Filter shows disagreement after the 80th time step. On the other hand, a considerable disagreement between the Ensemble Kalman Filter trajectories and the control is observed, as well as a total failure of 4DVAR. Better results were obtained for the case in which observations cover all the components of the model vector.",
+    "arxiv_url": "http://arxiv.org/abs/2604.08596v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.08596v1",
+    "categories": [
+      "nlin.CD"
+    ],
+    "primary_category": "nlin.CD",
+    "journal_ref": "J. Aerosp. Technol. Manag., 9(4), 469--475 (2017)",
+    "comment": "7 pages, 2 figures, J. Aerosp. Technol. Manag., 9(4), 469--475 (2017)",
+    "query_relevance_score": 1.0,
+    "query_relevance_reasons": [
+      "标题命中查询主题词：4dvar、4d-var、4d var、data assimilation。",
+      "摘要命中查询主题词：4dvar、4d-var、4d var、data assimilation。"
+    ],
+    "query_relevance_matched_terms": [
+      "4dvar",
+      "4d-var",
+      "4d var",
+      "data assimilation"
+    ],
+    "query_relevance_weak": false
+  },
+  {
+    "id": "2509.21751v2",
+    "title": "On the Effect of Neural Field Reparameterization for 4DVAR",
+    "authors": [
+      "Jaemin Oh"
+    ],
+    "published": "2025-09-26",
+    "abstract": "Four-dimensional variational data assimilation (4DVAR) is a cornerstone of numerical weather prediction, yet it remains computationally intensive and sensitive to initialization due to the non-convexity of its objective function. We propose a neural field-based reformulation of 4DVAR in which the spatiotemporal state is represented as a continuous function parameterized by a neural network. We demonstrate that optimizing in parameter space leverages the spectral bias of neural fields, acting as an implicit regularizer that stabilizes state estimation and suppresses spurious high-frequency oscillations without requiring explicit background error covariance information. Furthermore, by parameterizing the full spatiotemporal trajectory, our framework enables parallel-in-time optimization and incorporates physical constraints directly through physics-informed losses. Evaluations on chaotic benchmarks, including 2D Kolmogorov flow and 3D Taylor-Green vortices, show that neural reparameterization produces more accurate initial conditions than classical 4DVAR. When combined with separable neural architectures (SPINNs), the method achieves substantial speedups. Unlike many machine learning approaches, this framework requires no ground-truth training data, offering a robust and scalable alternative for operational data assimilation.",
+    "arxiv_url": "http://arxiv.org/abs/2509.21751v2",
+    "pdf_url": "https://arxiv.org/pdf/2509.21751v2",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "journal_ref": "",
+    "comment": "26 pages, 9 figures, 11 tables",
+    "query_relevance_score": 1.0,
+    "query_relevance_reasons": [
+      "标题命中查询主题词：4dvar、4d-var、4d var。",
+      "摘要命中查询主题词：4dvar、4d-var、4d var、four-dimensional variational。"
+    ],
+    "query_relevance_matched_terms": [
+      "4dvar",
+      "4d-var",
+      "4d var",
+      "four-dimensional variational",
+      "four dimensional variational",
+      "four-dimensional variational data assimilation",
+      "four dimensional variational data assimilation",
+      "variational data assimilation",
+      "data assimilation"
+    ],
+    "query_relevance_weak": false
+  },
+  {
+    "id": "2210.09424v1",
+    "title": "State estimation in minimal turbulent channel flow: A comparative study of 4DVar and PINN",
+    "authors": [
+      "Yifan Du",
+      "Mengze Wang",
+      "Tamer A. Zaki"
+    ],
+    "published": "2022-10-17",
+    "abstract": "The state of turbulent, minimal-channel flow is estimated from spatio-temporal sparse observations of the velocity, using both a physics-informed neural network (PINN) and adjoint-variational data assimilation (4DVar). The performance of PINN is assessed against the benchmark results from 4DVar. The PINN is efficient to implement, takes advantage of automatic differentiation to evaluate the governing equations, and does not require the development of an adjoint model. In addition, the flow evolution is expressed in terms of the network parameters which have a far smaller dimension than the predicted trajectory in state space or even just the initial condition of the flow. Provided adequate observations, network architecture and training, the PINN can yield satisfactory estimates of the the flow field, both for the missing velocity data and the entirely unobserved pressure field. However, accuracy depends on the network architecture, and the dependence is not known a priori. In comparison to 4DVar estimation which becomes progressively more accurate over the observation horizon, the PINN predictions are generally less accurate and maintain the same level of errors throughout the assimilation time window. Another notable distinction is the capacity to accurately forecast the flow evolution: while the 4DVar prediction depart from the true flow state gradually and according to the Lyapunov exponent, the PINN is entirely inaccurate immediately beyond the training time horizon unless re-trained. Most importantly, while 4DVar satisfies the discrete form of the governing equations point-wise to machine precision, in PINN the equations are only satisfied in an $L^2$ sense.",
+    "arxiv_url": "http://arxiv.org/abs/2210.09424v1",
+    "pdf_url": "https://arxiv.org/pdf/2210.09424v1",
+    "categories": [
+      "physics.flu-dyn"
+    ],
+    "primary_category": "physics.flu-dyn",
+    "journal_ref": "",
+    "comment": "",
+    "query_relevance_score": 1.0,
+    "query_relevance_reasons": [
+      "标题命中查询主题词：4dvar、4d-var、4d var。",
+      "摘要命中查询主题词：4dvar、4d-var、4d var、variational data assimilation。"
+    ],
+    "query_relevance_matched_terms": [
+      "4dvar",
+      "4d-var",
+      "4d var",
+      "variational data assimilation",
+      "data assimilation"
+    ],
+    "query_relevance_weak": false
+  },
+  {
+    "id": "2112.05529v2",
+    "title": "Sensitivity Analysis of Domain Decomposition method for 4D Variational Data Assimilation (DD-4DVAR DA)",
+    "authors": [
+      "Luisa D'Amore",
+      "Rosalba Cacciapuoti"
+    ],
+    "published": "2021-11-24",
+    "abstract": "We prove consistence, convergence and stability of the Domain Decomposition in space and time method of 4DVAR Data Assimilation problem. We introduce the condition number of the problem and validate the theoretical analysis through numerical results",
+    "arxiv_url": "http://arxiv.org/abs/2112.05529v2",
+    "pdf_url": "https://arxiv.org/pdf/2112.05529v2",
+    "categories": [
+      "math.NA"
+    ],
+    "primary_category": "math.NA",
+    "journal_ref": "",
+    "comment": "",
+    "query_relevance_score": 1.0,
+    "query_relevance_reasons": [
+      "标题命中查询主题词：4dvar、4d-var、4d var、4d variational。",
+      "摘要命中查询主题词：4dvar、4d-var、4d var、data assimilation。"
+    ],
+    "query_relevance_matched_terms": [
+      "4dvar",
+      "4d-var",
+      "4d var",
+      "4d variational",
+      "variational data assimilation",
+      "data assimilation"
+    ],
+    "query_relevance_weak": false
+  }
+]

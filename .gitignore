@@ -1,0 +1,29 @@
+# 环境变量（包含 API Key）
+.env
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# 用户上传的文件
+data/uploads/*
+data/notes/*
+!data/uploads/.gitkeep
+!data/notes/.gitkeep
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Python 虚拟环境
+venv/
+.venv/
+env/
+
+# Streamlit
+.streamlit/secrets.toml
